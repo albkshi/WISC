@@ -1,0 +1,6 @@
+{
+  "name": "World Islamic Call Society - Sarajevo",
+  "description": "The official representation of the World Islamic Call Society in Bosnia and Herzegovina (Sarajevo): Islamic heritage, historic mosques of Bosnia, regional news, cultural dialogue, and official contacts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

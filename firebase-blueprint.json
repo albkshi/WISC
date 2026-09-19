@@ -1,0 +1,148 @@
+{
+  "entities": {
+    "settings": {
+      "title": "Settings",
+      "description": "System settings, authorized representative details, admin password and logo",
+      "fields": {
+        "directorNameAr": { "type": "string" },
+        "directorNameBs": { "type": "string" },
+        "directorTitleAr": { "type": "string" },
+        "directorTitleBs": { "type": "string" },
+        "sarajevoOfficeAddressBs": { "type": "string" },
+        "contactEmail": { "type": "string" },
+        "adminPin": { "type": "string" },
+        "customLogoUrl": { "type": "string" }
+      }
+    },
+    "landing_config": {
+      "title": "Landing Configuration",
+      "description": "Dynamic editable content for the landing page and hero section",
+      "fields": {
+        "heroTitleAr": { "type": "string" },
+        "heroTitleBs": { "type": "string" },
+        "heroSubtitleAr": { "type": "string" },
+        "heroSubtitleBs": { "type": "string" },
+        "heroBadgeAr": { "type": "string" },
+        "heroBadgeBs": { "type": "string" },
+        "quranVerseAr": { "type": "string" },
+        "quranVerseBs": { "type": "string" },
+        "quranCitationAr": { "type": "string" },
+        "quranCitationBs": { "type": "string" },
+        "stats": { "type": "array" },
+        "contactInfo": { "type": "object" },
+        "heroImageUrl": { "type": "string" }
+      }
+    },
+    "documents": {
+      "title": "Official Documents & Letters",
+      "description": "Government letters, mandate documents, and administrative paperwork",
+      "fields": {
+        "title": { "type": "string" },
+        "referenceNumber": { "type": "string" },
+        "category": { "type": "string" },
+        "date": { "type": "string" },
+        "sender": { "type": "string" },
+        "recipient": { "type": "string" },
+        "contentAr": { "type": "string" },
+        "contentBs": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "invoices": {
+      "title": "Invoices & Finance",
+      "description": "Expense invoices, currency conversions, and financial statements",
+      "fields": {
+        "invoiceNumber": { "type": "string" },
+        "descriptionAr": { "type": "string" },
+        "descriptionBs": { "type": "string" },
+        "amountBam": { "type": "number" },
+        "amountUsd": { "type": "number" },
+        "category": { "type": "string" },
+        "date": { "type": "string" },
+        "status": { "type": "string" }
+      }
+    },
+    "activities": {
+      "title": "Activities & News",
+      "description": "Humanitarian and cultural activity news",
+      "fields": {
+        "titleAr": { "type": "string" },
+        "titleBs": { "type": "string" },
+        "summaryAr": { "type": "string" },
+        "summaryBs": { "type": "string" },
+        "date": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      }
+    },
+    "mosques": {
+      "title": "Historic Bosnian Mosques",
+      "description": "Historical landmarks, architectural details, cities and photo links",
+      "fields": {
+        "nameAr": { "type": "string" },
+        "nameBs": { "type": "string" },
+        "cityAr": { "type": "string" },
+        "cityBs": { "type": "string" },
+        "yearBuilt": { "type": "string" },
+        "builderAr": { "type": "string" },
+        "builderBs": { "type": "string" },
+        "architectAr": { "type": "string" },
+        "architectBs": { "type": "string" },
+        "tagAr": { "type": "string" },
+        "tagBs": { "type": "string" },
+        "descriptionAr": { "type": "string" },
+        "descriptionBs": { "type": "string" },
+        "historicalSignificanceAr": { "type": "string" },
+        "historicalSignificanceBs": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "featuresAr": { "type": "array" },
+        "featuresBs": { "type": "array" }
+      }
+    },
+    "gallery_images": {
+      "title": "Media & Gallery Images",
+      "description": "Uploaded pictures, banners, mosque photos and media assets stored in Firebase",
+      "fields": {
+        "titleAr": { "type": "string" },
+        "titleBs": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "descriptionAr": { "type": "string" },
+        "descriptionBs": { "type": "string" },
+        "uploadedAt": { "type": "string" },
+        "sizeKb": { "type": "number" },
+        "isBuiltIn": { "type": "boolean" }
+      }
+    }
+  },
+  "firestore": {
+    "/settings/{settingId}": {
+      "schema": "settings",
+      "description": "System settings, admin PIN, official logo and styling"
+    },
+    "/landing_config/{configId}": {
+      "schema": "landing_config",
+      "description": "Landing page hero title, description, and hero banner image"
+    },
+    "/documents/{documentId}": {
+      "schema": "documents",
+      "description": "Official mandate letters and governmental correspondence"
+    },
+    "/invoices/{invoiceId}": {
+      "schema": "invoices",
+      "description": "Financial accounting records and expense invoices"
+    },
+    "/activities/{activityId}": {
+      "schema": "activities",
+      "description": "Regional news, diplomatic meetings and humanitarian activities"
+    },
+    "/mosques/{mosqueId}": {
+      "schema": "mosques",
+      "description": "Historic Bosnian mosques catalogue with linked images"
+    },
+    "/gallery_images/{imageId}": {
+      "schema": "gallery_images",
+      "description": "Media library of uploaded images and assets in Firebase"
+    }
+  }
+}
